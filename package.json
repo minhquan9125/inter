@@ -6,11 +6,6 @@
   "type": "module",
   "scripts": {
     "start": "cd server && npm start",
-    "start:server": "cd server && npm start",
-    "start:client": "cd client && npm start",
-    "build": "cd client && npm run build",
-    "build:client": "cd client && npm install --legacy-peer-deps && npm run build",
-    "build:server": "cd server && npm install --legacy-peer-deps",
-    "install:all": "npm install && cd client && npm install --legacy-peer-deps && cd ../server && npm install --legacy-peer-deps"
+    "postinstall": "cd server && npm install --legacy-peer-deps && cd ../client && npm install --legacy-peer-deps"
   }
 }
