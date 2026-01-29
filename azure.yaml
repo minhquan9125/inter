@@ -3,7 +3,7 @@ metadata:
   template: nodejs-react-express
 services:
   server:
-    project: ./Hospital_Management_Website-main/server
+    project: ./server
     language: nodejs
     host: appservice
     build:
@@ -12,7 +12,7 @@ services:
     run:
       command: npm start
   client:
-    project: ./Hospital_Management_Website-main/client
+    project: ./client
     language: nodejs
     host: staticwebapp
     build:
