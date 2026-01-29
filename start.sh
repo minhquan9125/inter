@@ -3,13 +3,12 @@ set -e
 
 echo "Installing server dependencies..."
 cd server
-npm install
-npm run build 2>/dev/null || true
+npm install --legacy-peer-deps
 cd ..
 
 echo "Installing client dependencies..."
 cd client
-npm install
+npm install --legacy-peer-deps
 npm run build
 cd ..
 
